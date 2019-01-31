@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectorRef, ViewChild } from '@angular/core';
 
 export interface InlineEditOptions {
   display?: 'image' | 'text';
@@ -36,7 +36,7 @@ export class InlineEditComponent implements OnInit {
   oldValue: any;
   editing: boolean;
 
-  @ViewChild('input') input: ElementRef;
+  @ViewChild('input') input;
 
   @Input()
   options: InlineEditOptions;
