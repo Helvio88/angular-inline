@@ -11,12 +11,10 @@ export class AppComponent {
 
   textOptions: InlineEditOptions = {
     display: 'text',
-    editType: 'number',
-    placeholder: 'What is the meaning of life?'
+    editType: 'number'
   };
 
   imageOptions: InlineEditOptions = {
-    placeholder: 'Image URL',
     display: 'image',
     editType: 'text',
     imageWidth: 150,

@@ -10,11 +10,11 @@
 
     <mat-tab label="Text (or number) Input">
 
-      <inline-edit [(value)]="values.answer" [options]="textOptions"></inline-edit>
+      <inline-edit [(value)]="values.answer" [options]="textOptions" placeholder="Image URL"></inline-edit>
     </mat-tab>
     
     <mat-tab label="Image URL Input">
-      <inline-edit [(value)]="values.image" [options]="imageOptions"></inline-edit>
+      <inline-edit [(value)]="values.image" [options]="imageOptions" placeholder="What is the meaning of life?"></inline-edit>
     </mat-tab>
 
 </mat-tab-group>

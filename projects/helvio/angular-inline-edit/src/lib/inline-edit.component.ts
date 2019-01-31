@@ -2,7 +2,6 @@ import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectorRef, View
 
 export interface InlineEditOptions {
   display?: 'image' | 'text';
-  placeholder?: string;
   class?: string;
   editType?: 'text' | 'number';
   imageWidth?: number;
@@ -21,7 +20,7 @@ export interface InlineEditOptions {
 
     <!--Edit-->
     <mat-form-field *ngIf="editing">
-      <input matInput [type]="options.editType" [placeholder]="options.placeholder" [(ngModel)]="value"
+      <input matInput [type]="options.editType" [placeholder]="placeholder" [(ngModel)]="value"
         (keydown.escape)="abandon()" (keydown.enter)="confirm()" #input>
       <button mat-button matSuffix mat-icon-button (click)="confirm()">
         <mat-icon>save</mat-icon>
@@ -39,13 +38,16 @@ export class InlineEditComponent implements OnInit {
   @ViewChild('input') input;
 
   @Input()
-  options: InlineEditOptions;
-
-  @Input()
   value: any;
 
   @Output()
   valueChange = new EventEmitter<any>();
+
+  @Input()
+  options: InlineEditOptions;
+
+  @Input()
+  placeholder: string;
 
   @Output()
   save = new EventEmitter();
@@ -77,6 +79,7 @@ export class InlineEditComponent implements OnInit {
   }
 
   defaults() {
+    this.options = this.options || {};
     this.options.display = this.options.display || 'text';
     this.options.editType = this.options.editType || 'text';
     this.options.imageWidth = this.options.imageWidth || 64;
