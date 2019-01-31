@@ -1,0 +1,22 @@
+{
+  "name": "@helvio/angular-inline-edit",
+  "version": "1.0.0",
+  "description": "Angular Inline Edit for Text and Images",
+  "keywords": [
+    "angular",
+    "inline",
+    "edit"
+  ],
+  "private": false,
+  "preferGlobal": true,
+  "author": "Helvio Pedreschi",
+  "bugs": "https://github.com/Helvio88/angular-inline/issues",
+  "homepage": "https://github.com/Helvio88/angular-inline",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  }
+}

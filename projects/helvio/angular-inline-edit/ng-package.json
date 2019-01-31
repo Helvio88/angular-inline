@@ -1,0 +1,7 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/helvio/angular-inline-edit",
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  }
+}

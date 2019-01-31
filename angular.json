@@ -129,6 +129,41 @@
           }
         }
       }
+    },
+    "@helvio/angular-inline-edit": {
+      "root": "projects/helvio/angular-inline-edit",
+      "sourceRoot": "projects/helvio/angular-inline-edit/src",
+      "projectType": "library",
+      "prefix": "inline",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/helvio/angular-inline-edit/tsconfig.lib.json",
+            "project": "projects/helvio/angular-inline-edit/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/helvio/angular-inline-edit/src/test.ts",
+            "tsConfig": "projects/helvio/angular-inline-edit/tsconfig.spec.json",
+            "karmaConfig": "projects/helvio/angular-inline-edit/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/helvio/angular-inline-edit/tsconfig.lib.json",
+              "projects/helvio/angular-inline-edit/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-inline"

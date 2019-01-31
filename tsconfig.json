@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@helvio/angular-inline-edit": [
+        "dist/helvio/angular-inline-edit"
+      ],
+      "@helvio/angular-inline-edit/*": [
+        "dist/helvio/angular-inline-edit/*"
+      ]
+    }
   }
 }
