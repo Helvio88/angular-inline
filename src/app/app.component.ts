@@ -17,12 +17,35 @@ export class AppComponent {
   imageOptions: InlineEditOptions = {
     display: 'image',
     editType: 'text',
-    imageWidth: 150,
-    imageHeight: 200
+    image: {
+      height: 200,
+      width: 150
+    }
   };
+
+  multiOptions: InlineEditOptions = {
+    display: 'text',
+    editType: 'textarea',
+    textarea: {
+      rows: 5
+    }
+  };
+
+  dateOptions: InlineEditOptions = {
+    display: 'text',
+    editType: 'date',
+    date: {
+      format: 'full',
+      max: new Date()
+    }
+  };
+
+  textAreaOptions: InlineEditOptions = {};
 
   values = {
     image: 'https://images-na.ssl-images-amazon.com/images/I/81fpbxyyabL._UR150,200_FMJPG_.jpg',
-    answer: 42
+    answer: 42,
+    multi: 'This is a\nMulti Line\nText!',
+    date: new Date()
   };
 }

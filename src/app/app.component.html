@@ -8,13 +8,20 @@
 
 <mat-tab-group>
 
-    <mat-tab label="Text (or number) Input">
-
-      <inline-edit [(value)]="values.answer" [options]="textOptions" placeholder="Image URL"></inline-edit>
+    <mat-tab label="Text (or number)">
+      <inline-edit [(value)]="values.answer" [options]="textOptions" placeholder="What is the meaning of life?"></inline-edit>
     </mat-tab>
     
-    <mat-tab label="Image URL Input">
-      <inline-edit [(value)]="values.image" [options]="imageOptions" placeholder="What is the meaning of life?"></inline-edit>
+    <mat-tab label="Image URL">
+      <inline-edit [(value)]="values.image" [options]="imageOptions" placeholder="Image URL" maxlength="400"></inline-edit>
+    </mat-tab>
+    
+    <mat-tab label="Text Area">
+      <inline-edit [(value)]="values.multi" [options]="multiOptions" placeholder="Multi Line Text"></inline-edit>
+    </mat-tab>
+    
+    <mat-tab label="Date">
+      <inline-edit [(value)]="values.date" [options]="dateOptions" placeholder="Pick a Date in the past"></inline-edit>
     </mat-tab>
 
 </mat-tab-group>
