@@ -1,27 +1,113 @@
-# AngularInline
+angular-inline
+==============
+A collection of Angular inline components. Today this collection is of 1. And it is a general purpose edit input.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+Install
+-------
 
-## Development server
+```node
+npm install @helvio/angular-inline-edit
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Import
+------
 
-## Code scaffolding
+In your `app.moddule.ts`:
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+import { AppComponent } from './app.component';
+import { InlineEditModule } from '@helvio/angular-inline-edit'; // Add This Line
+import { MatButtonModule, MatInputModule, MatFormFieldModule, MatIconModule, MatRippleModule, MatTabsModule } from '@angular/material';
 
-## Build
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserAnimationsModule,
+    BrowserModule,
+    InlineEditModule, // Add This Line
+    MatButtonModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatRippleModule,
+    MatTabsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Use
+---
+```html
+<inline-edit [(value)]="values.answer" [options]="textOptions" placeholder="What is the meaning of life?"></inline-edit>
+```
 
-## Running unit tests
+| Variable      | Type                | Default     | Remarks                                                 |
+| ------------- | ------------------- | ----------- | ------------------------------------------------------- |
+| `value`       | `any`               | `null`      | Bidirectional `string`, `number` or `date` to be edited |
+| `valueChange` | `@Output<any>`      |             | `EventEmitter` when saving                              |
+| `options`     | `InlineEditOptions` | See Remarks | Complex Object described below                          |
+| `placeholder` | `string`            | `null`      | Input box placeholder text                              |
+| `maxlength`   | `number`            | `null`      | Input box maximum length. Will display hint.            |
+| `save`        | `@Output<null>`     |             | `EventEmitter` when saving. Does not emit any value.    |
+| `cancel`      | `@Output<null>`     |             | `EventEmitter` when cancel. Does not emit any value.    |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+InlineEditOptions
+-----------------
 
-## Running end-to-end tests
+Interface:
+```js
+export interface InlineEditOptions {
+  display?: 'image' | 'text';
+  class?: string;
+  style?: string;
+  editType?: 'text' | 'number' | 'email' | 'url' | 'textarea' | 'date';
+  image?: {
+    width?: number;
+    height?: number;
+  };
+  textarea?: {
+    rows?: number;
+  };
+  date?: {
+    format?: string;
+    min?: Date;
+    max?: Date;
+  };
+}
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Default Values:
 
-## Further help
+| Variable        | Default Value | Description                                                                             |
+| --------------- | ------------- | --------------------------------------------------------------------------------------- |
+| `display`       | 'text'        | Displays the object as text or image. For image, a URL is required.                     |
+| `class`         | `null`        | Class(es) to add to the display value.                                                  |
+| `style`         | `null`        | Style(s) to add to the display value.                                                   |
+| `editType`      | 'text'        | Type of data to edit. Options are 'text', 'number', 'email', 'url', 'textarea', 'date'. |
+| `image.width`   | 64            | When using `display = 'image'`, sets the image width.                                   |
+| `image.height`  | 64            | When using `display = 'image'`, sets the image height.                                  |
+| `textarea.rows` | 4             | When using `editType = 'textarea', sets the number of rows (lines).                     |
+| `date.format`   | 'short'       | Date format to display when using `editType = 'date'`. See Angular Docs for details.    |
+| `date.min`      | `null`        | Minimum date for Date Validation when using `editType = 'date'`.                        |
+| `date.max`      | `null`        | Maximum date for Date Validation when using `editType = 'date'`.                        |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Demo
+----
+
+Run these scripts in order to run a local demonstration:
+
+```
+git clone https://github.com/Helvio88/angular-inline
+cd angular-inline
+npm install
+ng build @helvio/angular-inline-edit
+ng serve --open
+```
