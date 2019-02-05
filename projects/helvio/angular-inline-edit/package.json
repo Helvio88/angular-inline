@@ -1,11 +1,12 @@
 {
   "name": "@helvio/angular-inline-edit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Angular Inline Edit for Text and Images",
   "keywords": [
     "angular",
     "inline",
-    "edit"
+    "edit",
+    "material"
   ],
   "private": false,
   "preferGlobal": true,

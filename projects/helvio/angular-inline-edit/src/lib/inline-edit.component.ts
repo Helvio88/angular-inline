@@ -24,15 +24,16 @@ export interface InlineEditOptions {
   styles: ['inline-edit.component.css'],
   template: `
     <!--Display-->
-    <a mat-stroked-button *ngIf="!editing" (click)="edit()">
-      <span *ngIf="options.display !== 'image' && options.editType !== 'date'" [class]="options.class" [style]="options.style">
+    <a mat-stroked-button *ngIf="!editing" (click)="edit()" [class]="options.class" [style]="options.style">
+      <span *ngIf="options.display !== 'image' && options.editType !== 'date'">
         {{ value }}
       </span>
-      <span *ngIf="options.editType === 'date'" [class]="options.class" [style]="options.style">
+
+      <span *ngIf="options.editType === 'date'">
         {{ value | date:options.date.format }}
       </span>
-      <img *ngIf="options.display === 'image'" [class]="options.class" [style]="options.style"
-        [width]="options.image.width" [height]="options.image.height" [src]="value">
+
+      <img *ngIf="options.display === 'image'" [width]="options.image.width" [height]="options.image.height" [src]="value">
     </a>
 
     <!--Edit - Not Date-->
@@ -45,7 +46,7 @@ export interface InlineEditOptions {
         [placeholder]="placeholder" [maxlength]="maxlength" [(ngModel)]="value"
         (keydown.escape)="abandon()" #input></textarea>
 
-      <mat-hint align="end">{{value.length}} / {{ maxlength }}</mat-hint>
+      <mat-hint *ngIf="maxlength" align="end">{{value.length}} / {{ maxlength }}</mat-hint>
 
       <button mat-button matSuffix mat-icon-button (click)="confirm()">
         <mat-icon>save</mat-icon>
