@@ -1,11 +1,11 @@
 :host {
-    width: 100%;
+    width: 100% !important
 }
 
 a {
-    white-space: pre
+    white-space: pre !important
 }
 
 span {
-    white-space: pre
+    white-space: pre !important
 }

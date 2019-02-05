@@ -25,16 +25,15 @@ export interface InlineEditOptions {
   template: `
     <!--Display-->
     <a mat-stroked-button *ngIf="!editing" (click)="edit()">
-      <span *ngIf="options.display !== 'image' && options.editType !== 'date'" [class]="options.class" [style]="options.style">
+      <span *ngIf="options.display !== 'image' && options.editType !== 'date'">
         {{ value }}
       </span>
 
-      <span *ngIf="options.editType === 'date'" [class]="options.class" [style]="options.style">
+      <span *ngIf="options.editType === 'date'" >
         {{ value | date:options.date.format }}
       </span>
 
-      <img *ngIf="options.display === 'image'" [width]="options.image.width" [height]="options.image.height" [src]="value"
-        [class]="options.class" [style]="options.style">
+      <img *ngIf="options.display === 'image'" [width]="options.image.width" [height]="options.image.height" [src]="value">
     </a>
 
     <!--Edit - Not Date-->
