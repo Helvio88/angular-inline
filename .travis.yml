@@ -11,6 +11,7 @@ script:
 - ng build @helvio/angular-inline-edit
 - ng build --prod
 after_success:
+  - firebase use angular-inline --token $FIREBASE_TOKEN
   - firebase deploy --token $FIREBASE_TOKEN
 notifications:
   email:
