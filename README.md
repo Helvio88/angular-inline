@@ -4,6 +4,10 @@ angular-inline
 ==============
 A collection of Angular inline components. Today this collection is of 1. And it is a general purpose edit input.
 
+Is it any good?
+---------------
+[Yes][3]
+
 Install
 -------
 
@@ -101,11 +105,12 @@ Default Values:
 | `date.min`      | `null`        | Minimum date for Date Validation when using `editType = 'date'`.                        |
 | `date.max`      | `null`        | Maximum date for Date Validation when using `editType = 'date'`.                        |
 
-Demo
-----
+Hosted Demo
+-----------
+[Firebase][4]
 
-Run these scripts in order to run a local demonstration:
-
+Local Demo
+----------
 ```
 git clone https://github.com/Helvio88/angular-inline
 cd angular-inline
@@ -115,3 +120,5 @@ ng serve --open
 ```
 [1]: https://travis-ci.org/Helvio88/angular-inline.svg?branch=master "Build Status"
 [2]: https://travis-ci.org/Helvio88/angular-inline#
+[3]: https://news.ycombinator.com/item?id=3067434
+[4]: https://angular-inline.firebaseapp.com/
