@@ -16,16 +16,11 @@ notifications:
 before_deploy:
 - cd dist/helvio/angular-inline-edit
 deploy:
-  - provider: npm
-    skip_cleanup: true
-    email: helvio88@gmail.com
-    api_key:
-      secure: heE629et7hru1FTfoTPHJT4gTgx+aXoL0K3FkJT9nAiyeNgf/MaIt/vnxS/i7dYP6XjynaCLLAodL0eL5bSdVAwrY6+A+Uw4fAjCjgKjSOgj3R+oUdae+aneWViLjKEAO7W4JCdugpC4Jke/dyJrOJcezs1ELO+OG9AT3IxqnHltM56x+qPFFJpDbRFLxvmKjFyibXdXD17uqLSW7Tv+8ebDR/WNxICaZBNDJ2zWx/xiUsGlhvlrtq3S25XvQw8hwATenQ5dxEmNoV56LBzjs9KNAX0LnVoJsMb7gLrlFp4XSJp+MqorXqf8BSN8+5AsfXjlUGzKzknRMXnTMvoz/eEJapS5ltSx+VlGjV3T8ErdvLd21RYXdoAJOxPuvxVXUUxUoGJ7ef8UaXSmjxfOlAk1P7j+Ek2xkJko5GRONKqIdjUvTKwMjAMQUxx4fvVSNfOnSo+YwlAY4YDcHBiy/hrnWnogt7UYPrupR2VAiZ4Q7xqAFPW2bb002xDhdSa77zc0kIDrXbbp6U8XN9lmas4j6i90RrHYlvpeNEp8FXKRi6gGLeYnq4Y9d6g5M6cbvQm1+BtY5DF7UMaeDRAfFoTSp60gQBrZcadOSAmvuuF6QrPME/00Q3JwIElAy5Ld5c1tJIN9V4avQTUcY+fUQ4nRfXi45tEeUKZplKZsNJU=
-    on:
-      all_branches: true
-      repo: Helvio88/angular-inline
-  - provider: firebase
-    skip_cleanup: true
-    token:
-      secure: ui2j9RVNEDZvBFfzeXxDtbO6nnq2OlR2qIvnTL4qe0OBxUmISU/gFLvHN3OudaFYHtAsQ86aby6ifPmdlkgOl0zrNb/gJzlxAnMYTOPkAimV2/onkPT/bY+qRpbI4XPlqSftK+xuAS0QL4Lsv66wHT8q0ve6o28JTOfiCm1aJBSXt9du+ZfjCZ9TRWEjave8aJlzqT1gDdyFhTp50v9pPaET45JTsmoG2TQsA1rPB2nmw3cZ8qwRDIWBeM+SgghwC37WYHIG/FDr0UxtBtEde0vclyWKzU/CQLK+H603EUdphBao9mNMikvV2JT14mJtA0Btb/fj0LDH4PAvors/JvPLYEMurkQ8LMWz0rqkrRcyPNehCbMCLC3isp67aQ9LPI5tKGldza/NmpgF2kg9f9n6Ovo7m6SVm5dIkJwOzfAUmxLMbqC8byOiVBOzII+hbFm7YxM+MwT0nIr76hB8A8yDO/JWScSD0MRxcY0WNIf4ulZibDfJJowiDnlttVL6S9soc4zK8onniIqv57YvNvSRBsSy32f/ADV4wMPE0lLND0X9J1ypG8vqOSSPpFeP1iDf8YYLy5R4IyO0l+CNCiHT4/ZBE9vL6OlcuFav2682K2u+BSJU342Gwxy06fp63rVZzdx7NgP4Qe2t4dkiiSnEl/5+UwAHKxGzkhqm6+A=
-    project: angular-inline
+  provider: npm
+  skip_cleanup: true
+  email: helvio88@gmail.com
+  api_key:
+    secure: heE629et7hru1FTfoTPHJT4gTgx+aXoL0K3FkJT9nAiyeNgf/MaIt/vnxS/i7dYP6XjynaCLLAodL0eL5bSdVAwrY6+A+Uw4fAjCjgKjSOgj3R+oUdae+aneWViLjKEAO7W4JCdugpC4Jke/dyJrOJcezs1ELO+OG9AT3IxqnHltM56x+qPFFJpDbRFLxvmKjFyibXdXD17uqLSW7Tv+8ebDR/WNxICaZBNDJ2zWx/xiUsGlhvlrtq3S25XvQw8hwATenQ5dxEmNoV56LBzjs9KNAX0LnVoJsMb7gLrlFp4XSJp+MqorXqf8BSN8+5AsfXjlUGzKzknRMXnTMvoz/eEJapS5ltSx+VlGjV3T8ErdvLd21RYXdoAJOxPuvxVXUUxUoGJ7ef8UaXSmjxfOlAk1P7j+Ek2xkJko5GRONKqIdjUvTKwMjAMQUxx4fvVSNfOnSo+YwlAY4YDcHBiy/hrnWnogt7UYPrupR2VAiZ4Q7xqAFPW2bb002xDhdSa77zc0kIDrXbbp6U8XN9lmas4j6i90RrHYlvpeNEp8FXKRi6gGLeYnq4Y9d6g5M6cbvQm1+BtY5DF7UMaeDRAfFoTSp60gQBrZcadOSAmvuuF6QrPME/00Q3JwIElAy5Ld5c1tJIN9V4avQTUcY+fUQ4nRfXi45tEeUKZplKZsNJU=
+  on:
+    all_branches: true
+    repo: Helvio88/angular-inline
