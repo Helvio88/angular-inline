@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '11.6'
+branches:
+  only:
+  - master
+before_script:
+- npm install
+script:
+- ng build @helvio/angular-inline-edit
+- ng build --prod
+notifications:
+  email:
+    on_failure: change
+    on_success: change
+deploy:
+  - provider: firebase
+    token:
+      secure: ui2j9RVNEDZvBFfzeXxDtbO6nnq2OlR2qIvnTL4qe0OBxUmISU/gFLvHN3OudaFYHtAsQ86aby6ifPmdlkgOl0zrNb/gJzlxAnMYTOPkAimV2/onkPT/bY+qRpbI4XPlqSftK+xuAS0QL4Lsv66wHT8q0ve6o28JTOfiCm1aJBSXt9du+ZfjCZ9TRWEjave8aJlzqT1gDdyFhTp50v9pPaET45JTsmoG2TQsA1rPB2nmw3cZ8qwRDIWBeM+SgghwC37WYHIG/FDr0UxtBtEde0vclyWKzU/CQLK+H603EUdphBao9mNMikvV2JT14mJtA0Btb/fj0LDH4PAvors/JvPLYEMurkQ8LMWz0rqkrRcyPNehCbMCLC3isp67aQ9LPI5tKGldza/NmpgF2kg9f9n6Ovo7m6SVm5dIkJwOzfAUmxLMbqC8byOiVBOzII+hbFm7YxM+MwT0nIr76hB8A8yDO/JWScSD0MRxcY0WNIf4ulZibDfJJowiDnlttVL6S9soc4zK8onniIqv57YvNvSRBsSy32f/ADV4wMPE0lLND0X9J1ypG8vqOSSPpFeP1iDf8YYLy5R4IyO0l+CNCiHT4/ZBE9vL6OlcuFav2682K2u+BSJU342Gwxy06fp63rVZzdx7NgP4Qe2t4dkiiSnEl/5+UwAHKxGzkhqm6+A=
+    on:
+      all_branches: true
+      repo: Helvio88/angular-inline
