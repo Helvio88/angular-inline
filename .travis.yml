@@ -26,5 +26,5 @@ deploy:
   api_key:
     secure: heE629et7hru1FTfoTPHJT4gTgx+aXoL0K3FkJT9nAiyeNgf/MaIt/vnxS/i7dYP6XjynaCLLAodL0eL5bSdVAwrY6+A+Uw4fAjCjgKjSOgj3R+oUdae+aneWViLjKEAO7W4JCdugpC4Jke/dyJrOJcezs1ELO+OG9AT3IxqnHltM56x+qPFFJpDbRFLxvmKjFyibXdXD17uqLSW7Tv+8ebDR/WNxICaZBNDJ2zWx/xiUsGlhvlrtq3S25XvQw8hwATenQ5dxEmNoV56LBzjs9KNAX0LnVoJsMb7gLrlFp4XSJp+MqorXqf8BSN8+5AsfXjlUGzKzknRMXnTMvoz/eEJapS5ltSx+VlGjV3T8ErdvLd21RYXdoAJOxPuvxVXUUxUoGJ7ef8UaXSmjxfOlAk1P7j+Ek2xkJko5GRONKqIdjUvTKwMjAMQUxx4fvVSNfOnSo+YwlAY4YDcHBiy/hrnWnogt7UYPrupR2VAiZ4Q7xqAFPW2bb002xDhdSa77zc0kIDrXbbp6U8XN9lmas4j6i90RrHYlvpeNEp8FXKRi6gGLeYnq4Y9d6g5M6cbvQm1+BtY5DF7UMaeDRAfFoTSp60gQBrZcadOSAmvuuF6QrPME/00Q3JwIElAy5Ld5c1tJIN9V4avQTUcY+fUQ4nRfXi45tEeUKZplKZsNJU=
   on:
-    tags: true
+    all_branches: true
     repo: Helvio88/angular-inline
