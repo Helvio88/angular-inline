@@ -9,6 +9,8 @@ before_script:
 script:
 - ng build @helvio/angular-inline-edit
 - ng build --prod
+- ls dist -l
+- ls dist/angular-inline -l
 notifications:
   email:
     on_failure: change
