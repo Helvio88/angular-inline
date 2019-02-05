@@ -1,3 +1,5 @@
+[![Build Status][1]][2]
+
 angular-inline
 ==============
 A collection of Angular inline components. Today this collection is of 1. And it is a general purpose edit input.
@@ -111,3 +113,5 @@ npm install
 ng build @helvio/angular-inline-edit
 ng serve --open
 ```
+[1]: https://travis-ci.org/Helvio88/angular-inline.svg?branch=master "Build Status"
+[2]: https://travis-ci.org/Helvio88/angular-inline#
