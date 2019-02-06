@@ -2,8 +2,6 @@ import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectorRef, View
 
 export interface InlineEditOptions {
   display?: 'image' | 'text';
-  class?: string;
-  style?: string;
   editType?: 'text' | 'number' | 'email' | 'url' | 'textarea' | 'date';
   image?: {
     width?: number;
@@ -21,20 +19,14 @@ export interface InlineEditOptions {
 
 @Component({
   selector: 'inline-edit',
-  styles: ['inline-edit.component.css'],
+  styleUrls: ['./inline-edit.component.css'],
   template: `
     <!--Display-->
-    <a mat-stroked-button *ngIf="!editing" (click)="edit()">
-      <span *ngIf="options.display !== 'image' && options.editType !== 'date'">
-        {{ value }}
-      </span>
-
-      <span *ngIf="options.editType === 'date'" >
-        {{ value | date:options.date.format }}
-      </span>
-
+    <div *ngIf="!editing" (click)="edit()">
+      <pre *ngIf="options.display !== 'image' && options.editType !== 'date'">{{ value }}</pre>
+      <pre *ngIf="options.editType === 'date'" >{{ value | date:options.date.format }}</pre>
       <img *ngIf="options.display === 'image'" [width]="options.image.width" [height]="options.image.height" [src]="value">
-    </a>
+    </div>
 
     <!--Edit - Not Date-->
     <mat-form-field *ngIf="editing && options.editType !== 'date'" style="width: 100%">

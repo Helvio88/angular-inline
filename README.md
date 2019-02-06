@@ -72,8 +72,6 @@ Interface:
 ```js
 export interface InlineEditOptions {
   display?: 'image' | 'text';
-  class?: string;
-  style?: string;
   editType?: 'text' | 'number' | 'email' | 'url' | 'textarea' | 'date';
   image?: {
     width?: number;
@@ -95,8 +93,6 @@ Default Values:
 | Variable        | Default Value | Description                                                                             |
 | --------------- | ------------- | --------------------------------------------------------------------------------------- |
 | `display`       | 'text'        | Displays the object as text or image. For image, a URL is required.                     |
-| `class`         | `null`        | Class(es) to add to the display value.                                                  |
-| `style`         | `null`        | Style(s) to add to the display value.                                                   |
 | `editType`      | 'text'        | Type of data to edit. Options are 'text', 'number', 'email', 'url', 'textarea', 'date'. |
 | `image.width`   | 64            | When using `display = 'image'`, sets the image width.                                   |
 | `image.height`  | 64            | When using `display = 'image'`, sets the image height.                                  |

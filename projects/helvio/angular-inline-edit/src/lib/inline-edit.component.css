@@ -2,10 +2,11 @@
     width: 100% !important
 }
 
-a {
-    white-space: pre !important
-}
-
-span {
-    white-space: pre !important
+div {
+    border-left: 6px solid orange;
+    background-color: lightgray;
+    cursor: pointer;
+    margin: auto;
+    padding-left: 10px;
+    line-height: 3;
 }
