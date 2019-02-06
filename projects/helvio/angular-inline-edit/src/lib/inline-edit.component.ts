@@ -22,11 +22,12 @@ export interface InlineEditOptions {
   styleUrls: ['./inline-edit.component.css'],
   template: `
     <!--Display-->
-    <div *ngIf="!editing" (click)="edit()">
-      <pre *ngIf="options.display !== 'image' && options.editType !== 'date'">{{ value }}</pre>
-      <pre *ngIf="options.editType === 'date'" >{{ value | date:options.date.format }}</pre>
-      <img *ngIf="options.display === 'image'" [width]="options.image.width" [height]="options.image.height" [src]="value">
+    <div *ngIf="!editing && options.display !== 'image'" (click)="edit()">
+      <pre *ngIf="options.editType === 'date'">{{ value | date:options.date.format }}</pre>
+      <pre *ngIf="options.editType !== 'date'">{{ value }}</pre>
     </div>
+    <img *ngIf="!editing && options.display === 'image'" (click)="edit()"
+      [width]="options.image.width" [height]="options.image.height" [src]="value">
 
     <!--Edit - Not Date-->
     <mat-form-field *ngIf="editing && options.editType !== 'date'" style="width: 100%">

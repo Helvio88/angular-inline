@@ -1,12 +1,17 @@
 :host {
-    width: 100% !important
+    width: 100%;
 }
 
 div {
     border-left: 6px solid orange;
     background-color: lightgray;
     cursor: pointer;
-    margin: auto;
-    padding-left: 10px;
-    line-height: 3;
+}
+
+pre {
+    padding: 6px;
+}
+
+img {
+    cursor: pointer;
 }
