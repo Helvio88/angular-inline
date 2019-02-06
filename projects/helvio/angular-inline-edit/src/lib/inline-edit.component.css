@@ -6,6 +6,7 @@ div {
     border-left: 6px solid orange;
     background-color: lightgray;
     cursor: pointer;
+    margin-right: 6px;
 }
 
 pre {
