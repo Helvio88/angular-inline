@@ -12,7 +12,7 @@ Install
 -------
 
 ```node
-npm install @helvio/angular-inline-edit
+npm install --save @helvio/angular-inline-edit
 ```
 
 Import
