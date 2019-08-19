@@ -96,7 +96,7 @@ Default Values:
 | `editType`      | 'text'        | Type of data to edit. Options are 'text', 'number', 'email', 'url', 'textarea', 'date'. |
 | `image.width`   | 64            | When using `display = 'image'`, sets the image width.                                   |
 | `image.height`  | 64            | When using `display = 'image'`, sets the image height.                                  |
-| `textarea.rows` | 4             | When using `editType = 'textarea', sets the number of rows (lines).                     |
+| `textarea.rows` | 4             | When using `editType = 'textarea`, sets the number of rows (lines).                     |
 | `date.format`   | 'short'       | Date format to display when using `editType = 'date'`. See Angular Docs for details.    |
 | `date.min`      | `null`        | Minimum date for Date Validation when using `editType = 'date'`.                        |
 | `date.max`      | `null`        | Maximum date for Date Validation when using `editType = 'date'`.                        |
